@@ -31,6 +31,8 @@ const skills = [
 ];
 
 export const Hero = () => {
+  const currentYear = new Date().getFullYear();
+  const startYear = 2016;
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Bg */}
@@ -66,16 +68,16 @@ export const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-8">
-            <div className="animate-fade-in">
+            {/* <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                 Software Engineer • React Specialist
               </span>
-            </div>
+            </div> */}
 
             {/* Headline */}
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
+              {/* <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
                 Crafting <span className="text-primary glow-text">digital</span>
                 <br />
                 experiences with
@@ -88,11 +90,15 @@ export const Hero = () => {
                 Hi, I'm Pedro Machado — a software engineer specializing in
                 React, Next.js, and TypeScript. I build scalable, performant web
                 applications that users love.
+              </p> */}
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">WELDINX TECHNICAL INSPECTION</h1>
+              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
+                Third-party inspection expediting & supplier audit in-service inspection quality system consulting.
               </p>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
+            {/* <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
               <Button size="lg">
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
@@ -100,7 +106,7 @@ export const Hero = () => {
                 <Download className="w-5 h-5" />
                 Download CV
               </AnimatedBorderButton>
-            </div>
+            </div> */}
 
             {/* Social Links */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
@@ -133,7 +139,7 @@ export const Hero = () => {
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
                   src="/profile-photo.jpg"
-                  alt="Pedro Machado"
+                  alt="Tuan Bui"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
 
@@ -148,7 +154,7 @@ export const Hero = () => {
                 </div>
                 {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">5+</div>
+                  <div className="text-2xl font-bold text-primary">{currentYear - startYear}+</div>
                   <div className="text-xs text-muted-foreground">
                     Years Exp.
                   </div>

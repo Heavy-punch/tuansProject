@@ -6,7 +6,7 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
-  { href: "#testimonials", label: "Testimonials" },
+  { href: "#testimonials", label: "supplier" },
 ];
 
 export const Navbar = () => {
@@ -32,9 +32,11 @@ export const Navbar = () => {
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a
           href="#"
-          className="text-xl font-bold tracking-tight hover:text-primary"
+          className="text-xl font-bold tracking-tight hover:text-primary block flex flex-col items-center justify-center"
         >
-          PM<span className="text-primary">.</span>
+          {/* PM<span className="text-primary">.</span> */}
+          <img src="/public/logo.png" className="w-100px] h-[80px] "></img>
+          {/* <p className="text-primary block text-md ">WELDINX TECHNICAL INSPECTION</p> */}
         </a>
 
         {/* Desktop Nav */}
