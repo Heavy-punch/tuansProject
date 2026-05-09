@@ -1,29 +1,32 @@
 import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
 
-const highlights = [
-  {
-    icon: Code2,
-    title: "Clean Code",
-    description:
-      "Writing maintainable, scalable code that stands the test of time.",
-  },
-  {
-    icon: Rocket,
-    title: "Performance",
-    description:
-      "Optimizing for speed and delivering lightning-fast user experiences.",
-  },
-  {
-    icon: Users,
-    title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Innovation",
-    description:
-      "Staying ahead with the latest technologies and best practices.",
-  },
+// const highlights = [
+//   {
+//     icon: Code2,
+//     title: "Clean Code",
+//     description:
+//       "Writing maintainable, scalable code that stands the test of time.",
+//   },
+//   {
+//     icon: Rocket,
+//     title: "Performance",
+//     description:
+//       "Optimizing for speed and delivering lightning-fast user experiences.",
+//   },
+//   {
+//     icon: Users,
+//     title: "Collaboration",
+//     description: "Working closely with teams to bring ideas to life.",
+//   },
+//   {
+//     icon: Lightbulb,
+//     title: "Innovation",
+//     description:
+//       "Staying ahead with the latest technologies and best practices.",
+//   },
+// ];
+const focus = [
+  "Independent inspection", "Fabrication quality control", "Welding inspection", "Supplier audit", "Welding Procedure Qualification (WPS)", "Welder Qualification / Certification", "Project expediting"
 ];
 
 export const About = () => {
@@ -34,64 +37,56 @@ export const About = () => {
           {/* Left Column */}
           <div className="space-y-8">
             <div className="animate-fade-in">
-              <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
-                About Me
+              <span className="text-secondary-foreground text-lg font-bold ium tracking-wider uppercase ">
+                About WeldinX
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
+            {/* <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
               Building the future,
               <span className="font-serif italic font-normal text-white">
                 {" "}
                 one component at a time.
               </span>
-            </h2>
+            </h2> */}
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a passionate software engineer with over 5 years of
-                experience crafting digital products that make a difference. My
-                journey started with a curiosity for how things work on the web,
-                and it has evolved into a deep expertise in modern frontend
-                technologies.
+                WeldinX provides independent inspection, expediting, supplier audit, and technical consulting services to support fabrication and manufacturing projects.
+
+
+                WeldinX also provides welding procedure qualification (WPS) and welder certification activities.
               </p>
               <p>
-                I specialize in React, Next.js, and TypeScript, building
-                everything from sleek landing pages to complex enterprise
-                applications. My approach combines technical excellence with a
-                keen eye for design and user experience.
+                With extensive experience in welding, fabrication, and industrial equipment, WeldinX supports clients by providing professional inspection services at manufacturing facilities, verifying that production activities meet project specifications and international standards.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or sharing knowledge with
-                the developer community.
+                WeldinX also provides welding procedure qualification (WPS) and welder certification activities.
               </p>
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "My mission is to create digital experiences that are not just
-                functional, but truly delightful — products that users love to
-                use and developers love to maintain."
+                "Our mission is to help clients ensure quality, compliance, and reliability throughout the production process."
               </p>
             </div>
           </div>
 
           {/* Right Column - Hilights */}
           <div className="grid sm:grid-cols-2 gap-6">
-            {highlights.map((item, idx) => (
+            {focus.map((item, idx) => (
               <div
                 key={idx}
                 className="glass p-6 rounded-2xl animate-fade-in"
                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
+                {/* <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
                   <item.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">
+                </div> */}
+                <h3 className="text-secondary-foreground text-sm font-semibold mb-2">{item}</h3>
+                {/* <p className="text-sm text-muted-foreground">
                   {item.description}
-                </p>
+                </p> */}
               </div>
             ))}
           </div>

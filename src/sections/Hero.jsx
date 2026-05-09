@@ -109,7 +109,7 @@ export const Hero = () => {
             </div> */}
 
             {/* Social Links */}
-            <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+            {/* <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
                 { icon: Github, href: "#" },
@@ -124,7 +124,7 @@ export const Hero = () => {
                   {<social.icon className="w-5 h-5" />}
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
           {/* Right Column - Profile Image */}
           <div className="relatice animate-fade-in animation-delay-300">
@@ -144,14 +144,14 @@ export const Hero = () => {
                 />
 
                 {/* Floating Badge */}
-                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                {/* <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                     <span className="text-sm font-medium">
                       Available for work
                     </span>
                   </div>
-                </div>
+                </div> */}
                 {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
                   <div className="text-2xl font-bold text-primary">{currentYear - startYear}+</div>
@@ -165,7 +165,7 @@ export const Hero = () => {
         </div>
 
         {/* Skills Section */}
-        <div className="mt-20 animate-fade-in animation-delay-600">
+        {/* <div className="mt-20 animate-fade-in animation-delay-600">
           <p className="text-sm text-muted-foreground mb-6 text-center">
             Technologies I work with
           </p>
@@ -188,7 +188,7 @@ export const Hero = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div
