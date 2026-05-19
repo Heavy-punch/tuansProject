@@ -4,8 +4,8 @@ import { Contact } from "@/sections/Contact";
 import { Experience } from "@/sections/Experience";
 import { Hero } from "@/sections/Hero";
 import { Footer } from "./layout/Footer";
-import { Expertise } from "./sections/expertise";
-import { Service } from "./sections/service";
+import { Expertise } from "./sections/Expertise";
+import { Service } from "./sections/Service";
 import { Supplier } from "./sections/Supplier";
 
 function App() {
