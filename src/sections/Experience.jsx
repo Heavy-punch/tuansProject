@@ -1,43 +1,47 @@
-const experiences = [
-  {
-    period: "2022 — Present",
-    role: "Senior Frontend Engineer",
-    company: "Tech Innovators Inc.",
-    description:
-      "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
-    current: true,
-  },
-  {
-    period: "2020 — 2022",
-    role: "Frontend Engineer",
-    company: "Digital Solutions Co.",
-    description:
-      "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
-    technologies: ["React", "Redux", "Jest", "Cypress"],
-    current: false,
-  },
-  {
-    period: "2019 — 2020",
-    role: "Junior Developer",
-    company: "StartUp Labs",
-    description:
-      "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components.",
-    technologies: ["React", "Node.js", "MongoDB", "AWS"],
-    current: false,
-  },
-  {
-    period: "2018 — 2019",
-    role: "Freelance Developer",
-    company: "Self-Employed",
-    description:
-      "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications, handling everything from design to deployment.",
-    technologies: ["JavaScript", "PHP", "WordPress", "MySQL"],
-    current: false,
-  },
-];
+// const experiences = [
+//   {
+//     period: "2022 — Present",
+//     role: "Senior Frontend Engineer",
+//     company: "Tech Innovators Inc.",
+//     description:
+//       "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
+//     technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+//     current: true,
+//   },
+//   {
+//     period: "2020 — 2022",
+//     role: "Frontend Engineer",
+//     company: "Digital Solutions Co.",
+//     description:
+//       "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
+//     technologies: ["React", "Redux", "Jest", "Cypress"],
+//     current: false,
+//   },
+//   {
+//     period: "2019 — 2020",
+//     role: "Junior Developer",
+//     company: "StartUp Labs",
+//     description:
+//       "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components.",
+//     technologies: ["React", "Node.js", "MongoDB", "AWS"],
+//     current: false,
+//   },
+//   {
+//     period: "2018 — 2019",
+//     role: "Freelance Developer",
+//     company: "Self-Employed",
+//     description:
+//       "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications, handling everything from design to deployment.",
+//     technologies: ["JavaScript", "PHP", "WordPress", "MySQL"],
+//     current: false,
+//   },
+// ];
+
+import { EXPERIENCE as experiences } from "../data/experience.js";
+
 
 export const Experience = () => {
+  // console.log("this is flag",experiences);
   return (
     <section id="experience" className="py-32 relative overflow-hidden">
       <div
@@ -52,7 +56,7 @@ export const Experience = () => {
             className="text-secondary-foreground text-sm
            font-medium tracking-wider uppercase animate-fade-in"
           >
-            Career Journey
+            project experience
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold
@@ -66,13 +70,13 @@ export const Experience = () => {
             </span>
           </h2>
 
-          <p
+          {/* <p
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
             A timeline of my professional growth, from curious beginner to
             senior engineer leading teams and building products at scale.
-          </p>
+          </p> */}
         </div>
 
         {/* Timeline */}
@@ -96,37 +100,45 @@ export const Experience = () => {
 
                 {/* Content */}
                 <div
-                  className={`pl-8 md:pl-0 ${
-                    idx % 2 === 0
-                      ? "md:pr-16 md:text-right"
-                      : "md:col-start-2 md:pl-16"
-                  }`}
+                  className={`pl-8 md:pl-0 ${idx % 2 === 0
+                    ? "md:pr-16 md:text-right"
+                    : "md:col-start-2 md:pl-16"
+                    }`}
                 >
                   <div
-                    className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}
+                    className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500 relative`}
                   >
                     <span className="text-sm text-primary font-medium">
-                      {exp.period}
+                      {exp.project_name}
                     </span>
-                    <h3 className="text-xl font-semibold mt-2">{exp.role}</h3>
-                    <p className="text-muted-foreground">{exp.company}</p>
+                    <h3 className="text-xl font-semibold mt-2">{exp.client ?? ""}</h3>
+                    <p className="text-muted-foreground mt-4">{exp.vendor ?? ""}</p>
                     <p className="text-sm text-muted-foreground mt-4">
-                      {exp.description}
+                      {exp.location}
                     </p>
-                    <div
-                      className={`flex flex-wrap gap-2 mt-4 ${
-                        idx % 2 === 0 ? "md:justify-end" : ""
-                      }`}
-                    >
-                      {exp.technologies.map((tech, techIdx) => (
-                        <span
-                          key={techIdx}
-                          className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                    <p className="text-muted-foreground mt-4">{exp.standard ?? ""}</p>
+                    <img
+                      src={exp.image}
+                      alt={exp.project_name}
+                      className={`w-full h-full object-cover transition-transform duration-700 hover:scale-105 mt-5 rounded absolute top-[-30px]
+                        ${idx % 2 === 0
+                        ? "left-120/100 "
+                        : "right-120/100"
+                        }`}
+                    />
+
+                    {/* <div className={`w-full h-full object-cover transition-transform duration-700 hover:scale-105  absolute top-[-30px]
+                        ${idx % 2 === 0
+                        ? "left-120/100 "
+                        : "right-120/100"
+                      }`}>
+                      <img
+                        src={exp.image}
+                        alt={exp.project_name}
+                        className="rounded"
+                      />
+                    </div> */}
+
                   </div>
                 </div>
               </div>

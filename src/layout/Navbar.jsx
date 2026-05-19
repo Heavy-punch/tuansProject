@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 
 const navLinks = [
   { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
+  { href: "#expertise", label: "Expertise" },
+  { href: "#services", label: "Services" },
   { href: "#experience", label: "Experience" },
-  { href: "#testimonials", label: "supplier" },
+  { href: "#supplier", label: "Supplier" },
 ];
 
 export const Navbar = () => {
@@ -23,11 +24,19 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
+  const scrollToSection = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+  };
+
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 transition-all duration-500 ${
-        isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
-      }  z-50`}
+      className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
+        }  z-50`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a
@@ -35,7 +44,7 @@ export const Navbar = () => {
           className="text-xl font-bold tracking-tight hover:text-primary block flex flex-col items-center justify-center"
         >
           {/* PM<span className="text-primary">.</span> */}
-          <img src="/public/logo.png" className="w-100px] h-[80px] "></img>
+          <img src="/logo.png" className="w-100px] h-[80px] "></img>
           {/* <p className="text-primary block text-md ">WELDINX TECHNICAL INSPECTION</p> */}
         </a>
 
@@ -55,8 +64,8 @@ export const Navbar = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+        <div className="hidden md:block" >
+          <Button size="sm" onClick={scrollToSection}>Contact Me</Button>
         </div>
 
         {/* Mobile Menu Button */}

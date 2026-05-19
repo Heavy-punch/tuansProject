@@ -49,6 +49,7 @@ export const Hero = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(30)].map((_, i) => (
           <div
+          key={i}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60"
             style={{
               backgroundColor: "#20B2A6",
@@ -65,7 +66,7 @@ export const Hero = () => {
 
       {/* Content */}
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-8">
             {/* <div className="animate-fade-in">
@@ -127,9 +128,9 @@ export const Hero = () => {
             </div> */}
           </div>
           {/* Right Column - Profile Image */}
-          <div className="relatice animate-fade-in animation-delay-300">
+          <div className="relative animate-fade-in animation-delay-300">
             {/* Profile Image */}
-            <div className="relative max-w-md mx-auto">
+            <div className="relative max-w-auto mx-auto">
               <div
                 className="absolute inset-0 
               rounded-3xl bg-gradient-to-br 
@@ -140,7 +141,7 @@ export const Hero = () => {
                 <img
                   src="/profile-photo.jpg"
                   alt="Tuan Bui"
-                  className="w-full aspect-[4/5] object-cover rounded-2xl"
+                  className="w-full aspect-[7/5] object-cover rounded-2xl"
                 />
 
                 {/* Floating Badge */}

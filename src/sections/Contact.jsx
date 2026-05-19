@@ -1,14 +1,14 @@
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  CheckCircle,
-  AlertCircle,
-} from "lucide-react";
 import { Button } from "@/components/Button";
-import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import {
+  AlertCircle,
+  CheckCircle,
+  Mail,
+  MapPin,
+  Phone,
+  Send,
+} from "lucide-react";
+import { useState } from "react";
 
 const contactInfo = [
   {

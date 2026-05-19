@@ -4,12 +4,12 @@ const services = [
     {
         title: "Third Party Inspection",
         description: ["Specialized in Boiler, Pressure Vessel, HRSG, Steel Structure & Wind Tower.", "Ensuring full compliance with specifications and international standards (ASME, EN ISO, AWS, AS).", "WPS qualification, welder testing & certification."],
-        image: "/service/service_1.png",
+        image: "/service/service_1.jpg",
     },
     {
         title: "In-service inspection",
         description: ["Visual inspection, advanced NDT control & corrosion assessment.", "Remaining life assessment & damage evaluation.", "Inspection in accordance with API 510 / 570 / 653."],
-        image: "/service/service_2.png",
+        image: "/service/service_2.jpg",
     },
     {
         title: "Expediting Services and Supplier Audit",
@@ -19,7 +19,7 @@ const services = [
     {
         title: "Quality system consulting",
         description: ["QMS in accordance with EN 1090 / ISO 3834 / ASME / AS 5131 / PED.", "QA/QC procedures welding system setup.", "Lean process improvement."],
-        image: "/service/service_4.png",
+        image: "/service/service_4.jpg",
     },
 
 ];
@@ -36,7 +36,7 @@ export const Service = () => {
                     <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
                        our service
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
+                    <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
                         Reliable Inspection 
                         <span className="font-serif italic font-normal text-white">
                             {" "}
@@ -44,8 +44,7 @@ export const Service = () => {
                         </span>
                     </h2>
                     <p className="text-muted-foreground animate-fade-in animation-delay-200">
-                        A selection of my recent work, from complex web applications to
-                        innovative tools that solve real-world problems.
+                       At WeldinX, we offer specialized technical services to ensure quality and compliance throughout the fabrication process.
                     </p>
                 </div>
 
@@ -99,7 +98,7 @@ export const Service = () => {
                                                     group-hover:-translate-y-1 transition-all"
                                     />
                                 </div>
-                                <ul className="list-disc pl-5">
+                                <ul className="list-[circle] pl-5">
                                     {service.description.map((item, index) => (
                                         <li key={index} className="text-muted-foreground text-sm ">
                                             {item}
